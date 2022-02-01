@@ -13,7 +13,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: okteto/hello-world:golang
+      - image: quay.io/xm0uray/quay_ad_11_vvn_img_docker_v1
         name: hello-world
 
 ---
@@ -28,6 +28,6 @@ spec:
   type: ClusterIP  
   ports:
   - name: "hello-world"
-    port: 8080
+    port: 6080
   selector:
     app: hello-world
