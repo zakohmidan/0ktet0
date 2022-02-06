@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: php7-4-imap
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: php7-4-imap
   template:
     metadata:
       labels:
-        app: hello-world
+        app: php7-4-imap
     spec:
       containers:
       - image: quay.io/xm0uray/quay_ad_11_vvn_img_docker_v1
-        name: hello-world
+        name: php7-4-imap
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: php7-4-imap
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
@@ -30,4 +30,4 @@ spec:
   - name: "hello-world"
     port: 6080
   selector:
-    app: hello-world
+    app: php7-4-imap
